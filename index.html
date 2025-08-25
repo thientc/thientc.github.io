@@ -5,46 +5,110 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Researcher Introduction</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
+    /* Reset & Base */
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background: linear-gradient(135deg, #f0f4f9, #e6ecf5);
       color: #333;
+      line-height: 1.6;
     }
+
+    /* Container */
     .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      background: white;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-      margin-top: 40px;
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 40px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      animation: fadeIn 0.8s ease-in-out;
     }
+
+    /* Profile Section */
     .profile {
       text-align: center;
+      margin-bottom: 30px;
     }
     .profile img {
-      width: 300px;
-      height: 400px;
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
       border-radius: 50%;
-      margin-bottom: 10px;
+      border: 6px solid #e6ecf5;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      margin-bottom: 15px;
     }
-    h1 {
-      font-size: 24px;
+    .profile h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #1a237e;
       margin-bottom: 5px;
     }
-    h2 {
+    .profile p {
+      font-size: 16px;
       color: #555;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 5px;
     }
-    ul {
-      padding-left: 20px;
+
+    /* Section Headers */
+    h2 {
+      font-size: 20px;
+      color: #1a237e;
+      border-left: 4px solid #3949ab;
+      padding-left: 10px;
+      margin: 25px 0 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
-    .contact a {
-      color: #0066cc;
+
+    /* Lists */
+    ul, ol {
+      padding-left: 25px;
+      margin-bottom: 15px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    b {
+      color: #000;
+    }
+
+    /* Links */
+    a {
+      color: #3949ab;
       text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    a:hover {
+      color: #1a237e;
+      text-decoration: underline;
+    }
+
+    /* Contact */
+    .contact {
+      margin-top: 20px;
+      font-size: 15px;
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+      .profile img {
+        width: 150px;
+        height: 150px;
+      }
     }
   </style>
 </head>
@@ -62,40 +126,39 @@
       <li>Static/Dynamic Analysis</li>
       <li>Artificial Intelligence Security</li>
     </ul>
+
     <h2>Education</h2>
     <ul>
-      <li>
-          <b>Tomsk Polytechnic University </b> 
-Engineer's degree, Computer Software EngineeringEngineer's degree, Computer Software Engineering, 2004 - 2010,
-Grade: Excellent</li>
-      <li>
-        <b>Moscow Institute of Physics and Technology (State University) (MIPT) </b>
-Doctor of Philosophy - PhD, Computer Science, 2019 - 2023</li>
-      <li><b>Ho Chi Minh City University of Technology</b>
-Civil Engineering (Incomplete), 2002 –2004</li>
+      <li><b>Tomsk Polytechnic University</b> — Engineer's degree, Computer Software Engineering (2004–2010), Grade: Excellent</li>
+      <li><b>Moscow Institute of Physics and Technology (MIPT)</b> — PhD, Computer Science (2019–2023)</li>
+      <li><b>Ho Chi Minh City University of Technology</b> — Civil Engineering (Incomplete, 2002–2004)</li>
     </ul>
-    <h2>PUBLICATIONS:</h2>
+
+    <h2>Publications</h2>
     <ol>
-      <li>Tran, C.T. Improving Fuzz Testing Efficiency via Automated Fuzz Target Generation+). Program Comput Soft 51, 349–356 (2025). https://doi.org/10.1134/S0361768825700227</li>
-      <li>Tran, C.T., Van Huy, P. (2026). A Study on the Application of Large Language Models for Library Security Testing Under Low-Resource Conditions. In: Nguyen, N.T., et al. Computational Intelligence in Engineering Science. ICCIES 2025. Communications in Computer and Information Science, vol 2585. Springer, Cham. https://doi.org/10.1007/978-3-031-98164-7_19</li>
-      <li>C. T. Tran, D. Ponomarev and A. Kuznhesov, "Research on automatic generation of fuzz-target for software library functions," 2022 Ivannikov Ispras Open Conference (ISPRAS), Moscow, Russian Federation, 2022, pp. 95-99, doi: 10.1109/ISPRAS57371.2022.10076871</li>
-      <li>Futag - автоматический генератор фаззинг-оберток для программных библиотек / Т. Т. Чан, Ш. Ф. Курмангалеев, Т. А. Ларионов-Тришкин, А. А. Белеванцев // Ломоносовские чтения : научная конференция, Москва, 14–22 апреля 2022 года / МГУ имени М. В. Ломоносова. – Москва: ООО "МАКС Пресс", 2022. – С. 108-109. – EDN UXVIQQ</li>
-      <li>Thien, T. Application of automatic code generation and fuzzing technology for C/C++ library testing / T. Thien // IX International Conference «Engineering & Telecommunication En&T - 2022» : Book of Abstracts. IX International Conference, Москва, 23–24 ноября 2022 года. – Москва: Федеральное государственное автономное образовательное учреждение высшего образования «Московский физико-технический институт (национальный исследовательский университет)», 2022. – P. 36-43. – EDN TWMHPQ</li>
-      <li>C. T. Tran and S. Kurmangaleev, "Futag: Automated fuzz target generator for testing software libraries," 2021 Ivannikov MemorialWorkshop (IVMEM), 2021, pp. 80-85, doi:10.1109/IVMEM53963.2021.00021</li>
-      <li>Свидетельство о государственной регистрации программы для ЭВМ № 2021663344 Российская Федерация. Futag : № 2021662358 : заявл. 06.08.2021 : опубл. 16.08.2021 / Т. Т. Чан, Ш. Ф. Курмангалеев ; заявитель ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ НАУКИ ИНСТИТУТ СИСТЕМНОГО ПРОГРАММИРОВАНИЯ ИМ. В.П. ИВАННИКОВА РОССИЙСКОЙ АКАДЕМИИ НАУК. – EDN SWCJQP</li>
+      <li>Tran, C.T. Improving Fuzz Testing Efficiency via Automated Fuzz Target Generation. Program Comput Soft 51, 349–356 (2025). <a href="https://doi.org/10.1134/S0361768825700227">DOI</a></li>
+      <li>Tran, C.T., Van Huy, P. (2026). A Study on the Application of Large Language Models for Library Security Testing Under Low-Resource Conditions. In: ICCIES 2025. Springer. <a href="https://doi.org/10.1007/978-3-031-98164-7_19">DOI</a></li>
+      <li>C. T. Tran, D. Ponomarev, A. Kuznhesov, "Research on automatic generation of fuzz-target for software library functions," ISPRAS 2022. <a href="https://doi.org/10.1109/ISPRAS57371.2022.10076871">DOI</a></li>
+      <li>Futag - автоматический генератор фаззинг-оберток для библиотек. Ломоносовские чтения, МГУ, 2022.</li>
+      <li>Thien, T. Application of automatic code generation and fuzzing technology for C/C++ library testing. En&T 2022.</li>
+      <li>C. T. Tran, S. Kurmangaleev, "Futag: Automated fuzz target generator," IVMEM 2021. <a href="https://doi.org/10.1109/IVMEM53963.2021.00021">DOI</a></li>
+      <li>Certificate of Software Registration № 2021663344, Russian Federation (2021).</li>
     </ol>
-  <h2>CERTIFICATES:</h2>
-    IBM Data Science Professional Certificate, Nov. 2024.
-IBM Generative AI Essentials for Data Science, Oct. 2024.
-IBM Applied Data Science Capstone, Dec. 2023. 
-IBM Data Analysis with Python, Dec. 2023.
-MGU - Сounteracting computer terrorism, 2018.
-Kancellar.hu - Ethical Hacking, 2017.
+
+    <h2>Certificates</h2>
+    <ul>
+      <li>IBM Data Science Professional Certificate</li>
+      <li>IBM Generative AI Essentials for Data Science</li>
+      <li>IBM Applied Data Science Capstone</li>
+      <li>IBM Data Analysis with Python</li>
+      <li>Counteracting Computer Terrorism</li>
+      <li>Kancellar.hu - Ethical Hacking</li>
+    </ul>
 
     <h2>Contact</h2>
     <p class="contact">
-      Email: <a href="mailto:tranchithien@tdtu.edu.vn">tranchithien@tdtu.edu.vn</a><br />
-      Website: <a href="https://thientc.github.io/">https://thientc.github.io/</a>
+      📧 Email: <a href="mailto:tranchithien@tdtu.edu.vn">tranchithien@tdtu.edu.vn</a><br />
+      🌐 Website: <a href="https://thientc.github.io/">https://thientc.github.io/</a>
     </p>
   </div>
 </body>
